@@ -1,0 +1,97 @@
+
+%=======================   Default Templete   ==================
+\documentclass[a4paper]{article}
+\usepackage{graphicx}
+
+% file with some default definations
+\input{structure.tex}
+\usepackage{listings}
+\lstset{language=Python, basicstyle=\normalsize\sffamily\linespread{0.8}, numbers=left, numberstyle=\small, stepnumber=1, numbersep=5pt}
+\usepackage{fancyhdr}
+\usepackage{pdfpages} 
+\setlength{\parindent}{0pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textbf{\NAME\ (\ANDREWID)}}
+\chead{\textbf{UGP Report}}
+\rhead{\COURSE}
+
+
+%==================Header details======================
+\newcommand\NAME{Raghukul Raman Sudhanshu Jaiswal Chaman Agarwal}
+\newcommand\ANDREWID{}
+\newcommand\HWNUM{4}
+\newcommand\COURSE{CS395}
+%======================================================
+
+% available formatted sections:
+% - COMMAND LINE ENVIRONMENT: \begin{commandline} \end{commandline}
+% - FILE CONTENTS ENVIRONMENT: \begin{file}[optional filename, defaults to "File"]
+% - NUMBERED QUESTIONS ENVIRONMENT: \begin{question}[optional title]
+% - WARNING TEXT ENVIRONMENT(can also be used for note): \begin{warn}[optional title, defaults to "Warning:"]
+% - INFORMATION ENVIRONMENT(can be used to mention given details): \begin{info}[optional title, defaults to "Info:"]
+
+%===============================================================
+\begin{document}
+\includepdf[page={1}]{first_page.pdf}
+\section*{Abstract}
+An auction is a process of buying and selling goods or services by offering them up for bid, 
+taking bids, and then selling the item to the highest bidder. 
+So why are auctions important? In nutshell, it is important because certain goods might have some value to the seller,
+and therefore the seller might have some reserved price below which the she would not be willing to sell.
+If left to the market, the price might fall below that price.
+Also, there do exist willing buyers who are ready to pay the higher value.
+Moreover it has become a method of determining prices of goods. \\
+Some salient features of using an auction are:
+\begin{itemize}
+	\item Speedy Process, Quick Turnaround.
+	\item Competitive Bidding.
+	\item Auctions Work Well in Both Good and Bad Economic Times.
+	\item No Negotiations.
+	\item can get good idea of price.
+	\item You Know Exactly When Your Property or Goods Will Be Sold.
+	\item and may more...
+\end{itemize}
+Auctions have become an integral part of today's world, they are used extensively in almost every field. Some widely used auctions are spectrum auction, treasury auction, auction for advertisement, auctions for players such as in IPL or EPL leagues.\\ \\
+Considering the need for auctions, we hereby present a software, which is generic enough to conduct several different auctions called \textbf{Auctionit}.
+\\
+
+\section*{Introduction}
+AuctionIt allows auction designers to create and host auctions, users can place bids on items in the auction and can see the results and price they have to pay at the end of the auction process. Auction Designers can modify and create new fields which allow them to get more data from the bidders that is relevant to the auction being held. They can also choose from pre-defined auction templates to quickly set up some of the more common auctions. They can also define their custom allocation rules and pricing rules. This allows to set up complicated rules for pricing and allocation and thus provides more freedom to the designer to create a wide variety of auctions. 
+The software, categorizes auction designers and bidders as different types of users. These accounts are password protected to prevent misuse and to ensure the auction is not compromised while it runs.
+
+Before we started designing AuctionIt, we studied about auctions. We read papers/lectures to understand the reasons why first price and second price auctions are so popular and widely used. We also read and learnt about the auction process for large scale real life auctions take place like treasury auctions or spectrum auctions. We read about auctions with multiple objects and how these large scale auctions deal with having multiple objects which may be similar and how they setup rules to prevent allocating a majority of a commodity to a particular set of bidders.
+\section*{Theory Review}
+We read a paper on the problem of reallocation of the radio frequencies given to television stations, so as to clear spectrum for wireless internet access. The major challenges that are faced to conduct such an auction are:\\
+1) The channels to and their geographical locations need to be continuous for wireless so each owner becomes essential and can demand a higher price.\\
+2) Spectrum interference is required to be tackled while maintaining price clearing and continuous reallocation.
+
+To overcome these challenges an Incentive auction is conducted. An incentive auction consists of two separate auctions - a backward auction to determine the price at which broadcasters will sell their spectrum usage rights and a forward auction to identify the prices companies will pay for wireless allocation. Both forward and backward auctions are VCG auctions and belongs to a class of deferred acceptance algorithm, forward auction's bidding increases with rounds while the back auction is a decreasing clock auction.
+\\\\
+We also read about Treasury auctions, where the government sells securities to finance its debts. Treasury auctions are conducted either as discriminatory price auctions or as uniform price auctions, both of these are used by different governments around the world. We can define both of them as - 
+
+Discriminatory Price auction: Different winning bidders are charged different prices. In case of a single object, this reduces to the first-price auction.
+
+Uniform Price auction: All winning bidders pay an average uniform price. For a single item, this reduces to second-price auction.
+
+The uniform-price method in less affected by winners curse and so it outperforms the discriminatory auction concerning revenue generation. But most of the research reveals that discriminatory auctions are most common currently in real life, and this shows a contrast between theory and practice.
+\section*{Design Details}
+For the design, we can seperate AuctionIt into two major sections -  the database and the main program/front end. The database consists of the following set of tables : - \\
+\begin{enumerate}
+    \item \textbf{User} Table\\
+     - The user table stores information about the user and also his login credentials such as username and password details.
+    \item \textbf{Designer} Table\\
+    - The designer table stores the login credentials for the auction designers, it also stores a list of past auctions created by the designer with auction-id and revenue generated by the auction. If the designer has created custom allocation and pricing rules then we store their ids (from Table 7 and Table 8) for easy access while creating later auctions.
+    \item \textbf{Default Auction} Table
+    \item \textbf{Live Auction} Table
+    \item \textbf{Bid} Table
+    \item \textbf{Ranking} Table
+    \item \textbf{Allocation Rules} Table
+    \item \textbf{Pricing Rules} Table
+\end{enumerate}
+\section*{Further improvements}
+
+\section*{References}
+\end{document}
+
