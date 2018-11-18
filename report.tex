@@ -63,6 +63,8 @@ The software, categorizes auction designers and bidders as different types of us
 
 Before we started designing AuctionIt, we studied about auctions. We read papers/lectures to understand the reasons why first price and second price auctions are so popular and widely used. We also read and learnt about the auction process for large scale real life auctions take place like treasury auctions or spectrum auctions. We read about auctions with multiple objects and how these large scale auctions deal with having multiple objects which may be similar and how they setup rules to prevent allocating a majority of a commodity to a particular set of bidders.
 \section*{Theory Review}
+
+
 We read a paper on the problem of reallocation of the radio frequencies given to television stations, so as to clear spectrum for wireless internet access. The major challenges that are faced to conduct such an auction are:\\
 1) The channels to and their geographical locations need to be continuous for wireless so each owner becomes essential and can demand a higher price.\\
 2) Spectrum interference is required to be tackled while maintaining price clearing and continuous reallocation.
@@ -76,6 +78,24 @@ Discriminatory Price auction: Different winning bidders are charged different pr
 Uniform Price auction: All winning bidders pay an average uniform price. For a single item, this reduces to second-price auction.
 
 The uniform-price method in less affected by winners curse and so it outperforms the discriminatory auction concerning revenue generation. But most of the research reveals that discriminatory auctions are most common currently in real life, and this shows a contrast between theory and practice.
+
+
+\subsection*{Treasury Securities auctions}
+
+Treasury securities: Treasury securities or Treasuries are bonds issued by the government to meet their financial debts. Based on the period of maturity they are categorized into different types that are Treasury bills, notes, bonds, and Treasury inflation-protected securities.
+
+Most of the treasury auctions come in one of the two categories of auctions: Discriminatory Price auction and Uniform Price auction. Both of these follow the same allocation rule, i.e., the bidder with the highest bid wins but they have different pricing rule.
+
+In Discriminatory Price auction, the winner pays his own bid, so this reduces to the first-price auction in case of a single object auction while in Uniform price auction all winners pay an averaged uniform price and this cuts to the second-price auction in single item auction.
+
+Treasury auctions are different from other auctions as the values of these securities in the secondary market in known before the auction and are independent of the private valuation of the bidders. These type of auctions are called common value auctions. This difference in valuation results in a phenomenon called 'winner's curse' which is a significant factor in choosing between the above two pricing rules for revenue maximization proper of the above two price rules.
+
+Winner's Curse: In a common value auction the real value of the item is the same for all the bidders, but they bid differently according to their estimate of the secondary market value. If we take the average of all the bids as an estimate of the actual secondary market value, then the highest bidder incurs the highest loss by winning the item at such a high price.
+
+From the definition of the winner's curse, it can be observed that the winning bidder will suffer more loss in the case of discriminatory price auction than uniform price auction. This causes the bidders to bid less than there valuation and results in lower revenue.
+
+Hence the Uniform-price method is more efficient than the Discriminatory-price method regarding revenue generation, but several surveys reveal that Discriminatory-price method dominates in Treasury auctions in most parts of the world and so this is an example of a situation where theory and practice do not agree woth each other.
+
 \section*{Design Details}
 For the design, we can seperate AuctionIt into two major sections -  the database and the main program/front end. The database consists of the following set of tables : - \\
 \begin{enumerate}
