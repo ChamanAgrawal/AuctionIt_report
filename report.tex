@@ -70,30 +70,23 @@ We read a paper on the problem of reallocation of the radio frequencies given to
 2) Spectrum interference is required to be tackled while maintaining price clearing and continuous reallocation.
 
 To overcome these challenges an Incentive auction is conducted. An incentive auction consists of two separate auctions - a backward auction to determine the price at which broadcasters will sell their spectrum usage rights and a forward auction to identify the prices companies will pay for wireless allocation. Both forward and backward auctions are VCG auctions and belongs to a class of deferred acceptance algorithm, forward auction's bidding increases with rounds while the back auction is a decreasing clock auction.
-\\\\
-We also read about Treasury auctions, where the government sells securities to finance its debts. Treasury auctions are conducted either as discriminatory price auctions or as uniform price auctions, both of these are used by different governments around the world. We can define both of them as - 
-
-Discriminatory Price auction: Different winning bidders are charged different prices. In case of a single object, this reduces to the first-price auction.
-
-Uniform Price auction: All winning bidders pay an average uniform price. For a single item, this reduces to second-price auction.
-
-The uniform-price method in less affected by winners curse and so it outperforms the discriminatory auction concerning revenue generation. But most of the research reveals that discriminatory auctions are most common currently in real life, and this shows a contrast between theory and practice.
-
 
 \subsection*{Treasury Securities auctions}
 
-Treasury securities: Treasury securities or Treasuries are bonds issued by the government to meet their financial debts. Based on the period of maturity they are categorized into different types that are Treasury bills, notes, bonds, and Treasury inflation-protected securities.
-
-Most of the treasury auctions come in one of the two categories of auctions: Discriminatory Price auction and Uniform Price auction. Both of these follow the same allocation rule, i.e., the bidder with the highest bid wins but they have different pricing rule.
-
-In Discriminatory Price auction, the winner pays his own bid, so this reduces to the first-price auction in case of a single object auction while in Uniform price auction all winners pay an averaged uniform price and this cuts to the second-price auction in single item auction.
-
+\paragraph{Treasury securities :}Treasury securities or Treasuries are bonds issued by the government to meet their financial debts. Based on the period of maturity they are categorized into different types that are Treasury bills, notes, bonds, and Treasury inflation-protected securities.
+\\\\
+Most of the treasury auctions come in one of the two categories of auctions: Discriminatory Price auction and Uniform Price auction.
+\\\\
+\textbf{Discriminatory-Price auction :} In Discriminatory Price auction, allocation rule is that the bidder with the highest bid wins and the winner pays his own bid, so this reduces to the first-price auction in case of a single object auction.
+\\\\
+\textbf{Uniform-Price auction :} In this, the allocation rule is same as Discriminatory Price auction, that is the winner with the highest bid wins but in this case, all winners pay an averaged uniform price and this cuts to the second-price auction in single item auction.
+\\\\
 Treasury auctions are different from other auctions as the values of these securities in the secondary market in known before the auction and are independent of the private valuation of the bidders. These type of auctions are called common value auctions. This difference in valuation results in a phenomenon called 'winner's curse' which is a significant factor in choosing between the above two pricing rules for revenue maximization proper of the above two price rules.
-
-Winner's Curse: In a common value auction the real value of the item is the same for all the bidders, but they bid differently according to their estimate of the secondary market value. If we take the average of all the bids as an estimate of the actual secondary market value, then the highest bidder incurs the highest loss by winning the item at such a high price.
-
+\\\\
+\textbf{Winner's Curse :} In a common value auction the real value of the item is the same for all the bidders, but they bid differently according to their estimate of the secondary market value. If we take the average of all the bids as an estimate of the actual secondary market value, then the highest bidder incurs the highest loss by winning the item at such a high price.
+\\\\
 From the definition of the winner's curse, it can be observed that the winning bidder will suffer more loss in the case of discriminatory price auction than uniform price auction. This causes the bidders to bid less than there valuation and results in lower revenue.
-
+\\\\
 Hence the Uniform-price method is more efficient than the Discriminatory-price method regarding revenue generation, but several surveys reveal that Discriminatory-price method dominates in Treasury auctions in most parts of the world and so this is an example of a situation where theory and practice do not agree woth each other.
 
 \section*{Design Details}
