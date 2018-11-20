@@ -70,7 +70,16 @@ We read a paper on the problem of reallocation of the radio frequencies given to
 2) Spectrum interference is required to be tackled while maintaining price clearing and continuous reallocation.
 
 To overcome these challenges an Incentive auction is conducted. An incentive auction consists of two separate auctions - a backward auction to determine the price at which broadcasters will sell their spectrum usage rights and a forward auction to identify the prices companies will pay for wireless allocation. Both forward and backward auctions are VCG auctions and belongs to a class of deferred acceptance algorithm, forward auction's bidding increases with rounds while the back auction is a decreasing clock auction.
-
+\\\\
+We start by introducing First Price and Second Price auctions, which are the two most common types of auctions held around the world. 
+\\\\
+\textbf{First Price Auctions :} In a first price auction, all the bidders submit their sealed bids and then the highest bidder wins the auction while paying the price he bid. Though very commonly used, the first price auction is not incentive compatible. This means that the bidders will not achieve the best outcome by bidding an amount equal to his true valuation of the object(s). Since the profit for the bidder is Value - Bid, it makes sense to bid lower than his own valuation of the object. 
+\\\\
+\textbf{Incentive Compatibility :} An auction mechanism is said to be Incentive Compatible if every participant can achieve the best outcome to himself just by bidding at his own true valuation. 
+\\\\
+\textbf{Dominant-Strategy-Incentive-Compatible (DSIC) :} This a strong form of Incentive Compatibility where a bidder fares the best by being truthful regardless of what the other bidders act like. 
+\\\\
+\textbf{Second Price Auctions :} In a second price auction, all the bidders submit their sealed bids and the highest bidder wins the auction while paying the price of the \textbf{second highest} bidder. Unlike the first price auction mechanism, the second price auction is Incentive Compatible. Infact, it is DSIC, which means it is in the best interest of the bidder to submit his true valuation as the bid itself. 
 \subsection*{Treasury Securities auctions}
 
 \paragraph{Treasury securities :}Treasury securities or Treasuries are bonds issued by the government to meet their financial debts. Based on the period of maturity they are categorized into different types that are Treasury bills, notes, bonds, and Treasury inflation-protected securities.
