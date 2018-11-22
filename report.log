@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.11.20)  22 NOV 2018 23:09
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.11.20)  22 NOV 2018 23:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1155,98 +1155,128 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--59
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--83
+
+ []
+
 [2]
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 74.
+(Font)              scaled to size 12.0pt on input line 83.
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 74.
+(Font)              scaled to size 12.0pt on input line 83.
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--91
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 76--91
+Underfull \hbox (badness 10000) in paragraph at lines 85--100
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--91
+Underfull \hbox (badness 10000) in paragraph at lines 85--100
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--91
+Underfull \hbox (badness 10000) in paragraph at lines 85--100
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--91
+Underfull \hbox (badness 10000) in paragraph at lines 85--100
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--91
+Underfull \hbox (badness 10000) in paragraph at lines 85--100
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--91
+Underfull \hbox (badness 10000) in paragraph at lines 85--100
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--101
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 94--101
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 94--101
+Underfull \hbox (badness 10000) in paragraph at lines 85--100
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 104--111
+Underfull \hbox (badness 10000) in paragraph at lines 103--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--111
+Underfull \hbox (badness 10000) in paragraph at lines 103--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--111
+Underfull \hbox (badness 10000) in paragraph at lines 103--110
 
  []
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 114.
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--120
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--120
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--120
+
+ []
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 123.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 114.
+LaTeX Font Info:    Try loading font information for U+msb on input line 123.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 114.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 123.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
-Underfull \hbox (badness 10000) in paragraph at lines 126--128
+Underfull \hbox (badness 10000) in paragraph at lines 131--134
 
  []
 
-[4] [5] (./report.aux) ) 
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 137--139
+
+ []
+
+[5] (./report.aux) ) 
 Here is how much of TeX's memory you used:
  24802 strings out of 493638
  471069 string characters out of 6146795
- 511894 words of memory out of 5000000
+ 512894 words of memory out of 5000000
  27791 multiletter control sequences out of 15000+600000
  42913 words of font info for 34 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
