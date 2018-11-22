@@ -103,8 +103,33 @@ Hence the Uniform-price method is more efficient than the Discriminatory-price m
 The following is a study of the process used for the US radio spectrum reallocation given to television stations and clear spectrum for wireless internet service providers.
 \\\\
 The spectrum reallocation process is a complex one and needs to handle multiple challenges like how many television channels to reallocate, which channels to reassign, how to determine compensation for reassignment, how to distribute the cleared spectrum to the wireless companies etc. One of the major problems is that the channels cleared and their geographical location needs to be continuous for the wireless broadband purpose. The continuity requirement of channels and their geographic location makes even small owners important, and thus each broadcaster can ask for a higher price, exploiting his/her importance for the whole project. Other than these multiple problems the computational issues are also a concern. It is computationally expensive to check for interference constraints, and these checks are required for each reassignment.
-\\
+\\\\
 The auction to reassign spectrum, which came to be known as the 'incentive auction', involved bidding by both buyers and sellers.
+\\\\
+\textbf{Incentive auction:} This consists of two separate auctions - a backward auction to determine the price at which broadcasters will sell their spectrum usage rights and a forward auction to identify the prices companies will pay for wireless allocation. Both forward and backward auctions are VCG auctions and belong to a class of deferred acceptance algorithm, forward auction's bidding increases with rounds while the back auction is a decreasing clock auction.
+
+\subsubsection*{VCG for the incentive auction}
+
+In a VCG auction if the price of one player is a nondecreasing function of the bid by another player then they are called substitutes on the other hand if the price is a nonincreasing function of the other player's bid then they are called complements. Aggressive bidding by substitutes is desired as it will reduce the price of the radio spectrum.
+\\\\
+If one does not have to care about the cost of reallocation, then VCG auction will be an optimal choice that will promote truthful bidding and maximizes revenue. Each bid independently of other bidders and since each player bids regardless of the others the dominant strategy will be to bidders to bid their valuations. In the same way, the radio station will sell his license only when the price is strictly higher than his estimate.
+\\\\
+In the real incentive auction, a large number of stations are needed to clear even little spectrum for nationwide usage so the cost of reallocation cannot be ignored. This problem is solved by the changed property rights of television stations. The station only has right for interference-free coverage in some channel. As a result, the price of stations reduced since if the price is too high, it can be reassigned to a different channel. This promotes competition among the channels and makes them substitutes.
+\\\\
+So an unmodified VCG auction is not suitable for incentive auction because:
+
+\begin{description}
+
+\item[$\bullet$] It generally runs a budget deficit.
+\item[$\bullet$] It is computationally hard to solve the value maximization reallocation problem with millions of interference constraints subjected.
+\item[$\bullet$] The success of auction depends on the participation of small broadcasters. They may find the auction mechanism complex and decline to participate at all.
+
+\end{description}
+
+\subsubsection*{Modified VCG for the incentive auction}
+
+A Heuristic Clock Auction for incentive auction achieves high efficiency and more straightforward computation process and still strategy-proof. The design involves bidding in two auctions: a reversed auction for government to buy broadcasting rights from radio stations and a forward auction to sell the cleared spectrum to the wireless broadcasters. In each of the auctions, the auctioneer asks players to submit offers and then iteratively rejects them one by one. The auctioneer may allow the rejected player to offer again. At the end of the auction, all the offers that are not dismissed are accepted. The reverse is a decreasing clock auction in which the auctioneer quotes a decreasing sequence of prices, and the players indicate if they are willing to sell at that price or not. If not they leave the auction irreversibly. When the auction ends, all the remaining players sell their rights at the last quoted price. A similar approach is used in the forward auction to sell the rights to the wireless broadcasters.
+
 
 \section*{Design Details}
 For the design, we can seperate AuctionIt into two major sections -  the database and the main program/front end. The database consists of the following set of tables : - \\

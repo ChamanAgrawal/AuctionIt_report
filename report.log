@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.11.20)  21 NOV 2018 04:45
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.11.20)  22 NOV 2018 23:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1196,23 +1196,60 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--91
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--99
+Underfull \hbox (badness 10000) in paragraph at lines 94--101
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--101
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--101
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 101--103
+Underfull \hbox (badness 10000) in paragraph at lines 104--111
 
  []
 
-[4] (./report.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--111
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--111
+
+ []
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 114.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 114.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+stmry on input line 114.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
+Underfull \hbox (badness 10000) in paragraph at lines 126--128
+
+ []
+
+[4] [5] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 24763 strings out of 493638
- 470342 string characters out of 6146795
- 511893 words of memory out of 5000000
- 27772 multiletter control sequences out of 15000+600000
- 40602 words of font info for 23 fonts, out of 8000000 for 9000
+ 24802 strings out of 493638
+ 471069 string characters out of 6146795
+ 511894 words of memory out of 5000000
+ 27791 multiletter control sequences out of 15000+600000
+ 42913 words of font info for 34 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  69i,18n,72p,10417b,522s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on report.pdf (4 pages).
+Output written on report.pdf (5 pages).
