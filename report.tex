@@ -130,13 +130,14 @@ So, if $v_i < B$, then with true bidding his net utility gain $= 0$. If $v_i > B
 Let's now turn our attention to more complex auction: \\ \\
 \textbf{ Vickrey–Clarke–Groves (VCG) Auctions :}\\
 
-A VCG auction is basically a generalization of second price (Vickrey) auctions to multiple identical items. In a VCG auctions, where a set of identical items are sold, the bidders submit their sealed bids based on their internal valuations of the 
+\textbf{ Vickrey–Clarke–Groves (VCG) Auctions :}\\
 
-Consider an auction where a set of identical products are being sold. Bidders can take part in the auction by announcing the maximum price they are willing to pay to receive N products. Each buyer is allowed to declare more than one bid, since its willingness-to-pay per unit might be different depending on the total number of units it receives. Bidders cannot see other people's bids at any moment since they are sealed (only visible to the auction system). Once all the bids are made, the auction is closed.
+A VCG auction is basically a generalization of second price (Vickrey) auctions to multiple identical items. In a VCG auctions, where a set of identical items are sold, the bidders submit their sealed bids based on their internal valuations of the items. Each bidder can have multiple bids depending on the number of items they bid on, then the auction closes when all the bids are submitted.
 \\
-All the possible combinations of bids are then considered by the auction system, and the one maximizing the total sum of bids is kept, with the condition that it does not exceed the total amount of products available and that at most one bid from each bidder can be used. Bidders who have made a successful bid then receive the product quantity specified in their bid. The price they pay in exchange, however, is not the amount they had bid initially but only the marginal harm their bid has caused to other bidders (which is at most as high as their original bid).
+From all possible bid combinations the one that maximizes the social welfare (sum of bids) is chosen and the bidders receive their respective items according to the chosen bid combination. Now each winner pays the amount of welfare loss (damage to other bidders) caused by his presence.
 \\
-This marginal harm caused to other participants (i.e. the final price paid by each individual with a successful bid) can be calculated as: (sum of bids of the auction from the second best combination of bids) - (what other bidders have bid in the current (best) combination of bids). If the sum of bids of the second best combination of bids is the same as that of the best combination, then the price paid by the buyers will be the same as their initial bid. In all other cases, the price paid by the buyers will be lower.
+This price can be calculated as: (sum of bids of the auction from the second best combination of bids) - (what other bidders have bid in the current (best) combination of bids).
+
 
 \subsection*{Treasury Securities auctions}
 
@@ -271,7 +272,7 @@ Current issues in \texttt{ECONOMICS} and \texttt{FINANCE}, \textit{Vol. 3 No. 9,
 
 \bibitem{rbi} 
 Ravi Shankar and Sanjoy Bose. 
-\textit{Auctions of Government Securities in India –An Analysis.}
+\textit{Auctions of Government Securities in India – An Analysis.}
 Reserve Bank of India Occasional Papers,\textit{ Vol. 29 No. 3, Winter 2008}
 
 \bibitem{recent_adapt}
@@ -293,7 +294,6 @@ Paul R. Milgrom and Robert J. Weber.
 Kevin Leyton-Brown, Paul R. Milgrom and Ilya Segal.
 \textit{Economics and computer science of a radio spectrum reallocation.}
 PNAS, \textit{Vol. 114 No. 28, 2017}
-
 
 \bibitem{knuthwebsite} 
 Paul R. Milgrom.
