@@ -1,6 +1,7 @@
 
 %=======================   Default Templete   ==================
 \documentclass[a4paper]{article}
+% \documentclass[12pt]{extreport}
 \usepackage{graphicx}
 
 % file with some default definations
@@ -34,8 +35,14 @@
 
 %===============================================================
 \begin{document}
-\includepdf[page={1}]{first_page.pdf}
+% \includepdf[page={1}]{first_page.pdf}
 \section*{Abstract}
+
+% environment
+% \begin{large}
+
+
+
 An auction is a process of buying and selling goods or services by offering them up for bid, 
 taking bids, and then selling the item to the highest bidder. 
 So why are auctions important? In nutshell, it is important because certain goods might have some value to the seller,
@@ -45,54 +52,60 @@ Also, there do exist willing buyers who are ready to pay the higher value.
 Moreover it has become a method of determining prices of goods. \\
 Some salient features of using an auction are:
 \begin{itemize}
-	\item Speedy Process, Quick Turnaround.
-	\item Competitive Bidding.
-	\item Auctions Work Well in Both Good and Bad Economic Times.
-	\item No Negotiations.
-	\item can get good idea of price.
-	\item You Know Exactly When Your Property or Goods Will Be Sold.
-	\item and may more...
+    \item Speedy Process, Quick Turnaround.
+    \item Competitive Bidding.
+    \item Auctions Work Well in Both Good and Bad Economic Times.
+    \item No Negotiations.
+    \item can get good idea of price.
+    \item You Know Exactly When Your Property or Goods Will Be Sold.
+    \item and may more...
 \end{itemize}
 Auctions have become an integral part of today's world, they are used extensively in almost every field. Some widely used auctions are spectrum auction, treasury auction, auction for advertisement, auctions for players such as in IPL or EPL leagues.\\ \\
 Considering the need for auctions, we hereby present a software, which is generic enough to conduct several different auctions called \textbf{Auctionit}.
 \\
 
 \section*{Introduction}
-AuctionIt allows auction designers to create and host auctions, users can place bids on items in the auction and can see the results and price they have to pay at the end of the auction process. Auction Designers can modify and create new fields which allow them to get more data from the bidders that is relevant to the auction being held. They can also choose from pre-defined auction templates to quickly set up some of the more common auctions. They can also define their custom allocation rules and pricing rules. This allows to set up complicated rules for pricing and allocation and thus provides more freedom to the designer to create a wide variety of auctions. 
+AuctionIt allows auction designers to create and host auctions, users can place bids on items in the auction and can see the results and price they have to pay at the end of the auction process.
+\\\\ Auction Designers can modify and create new fields which allow them to get more data from the bidders that is relevant to the auction being held. They can also choose from pre-defined auction templates to quickly set up some of the more common auctions. They can also define their custom allocation rules and pricing rules. This allows to set up complicated rules for pricing and allocation and thus provides more freedom to the designer to create a wide variety of auctions. 
+\\\\
 The software, categorizes auction designers and bidders as different types of users. These accounts are password protected to prevent misuse and to ensure the auction is not compromised while it runs.
-
+\\\\
 Before we started designing AuctionIt, we studied about auctions. We read papers/lectures to understand the reasons why first price and second price auctions are so popular and widely used. We also read and learnt about the auction process for large scale real life auctions take place like treasury auctions or spectrum auctions. We read about auctions with multiple objects and how these large scale auctions deal with having multiple objects which may be similar and how they setup rules to prevent allocating a majority of a commodity to a particular set of bidders.
 \section*{Theory Review}
 
-
-We read a paper on the problem of reallocation of the radio frequencies given to television stations, so as to clear spectrum for wireless internet access. The major challenges that are faced to conduct such an auction are:\\
-1) The channels to and their geographical locations need to be continuous for wireless so each owner becomes essential and can demand a higher price.\\
-2) Spectrum interference is required to be tackled while maintaining price clearing and continuous reallocation.
-
-To overcome these challenges an Incentive auction is conducted. An incentive auction consists of two separate auctions - a backward auction to determine the price at which broadcasters will sell their spectrum usage rights and a forward auction to identify the prices companies will pay for wireless allocation. Both forward and backward auctions are VCG auctions and belongs to a class of deferred acceptance algorithm, forward auction's bidding increases with rounds while the back auction is a decreasing clock auction.
-\\\\
 We start by introducing First Price and Second Price auctions, which are the two most common types of auctions held around the world. 
 \\\\
-\textbf{First Price Auctions :} In a first price auction, all the bidders submit their sealed bids and then the highest bidder wins the auction while paying the price he bid. Though very commonly used, the first price auction is not incentive compatible. This means that the bidders will not achieve the best outcome by bidding an amount equal to his true valuation of the object(s). Since the profit for the bidder is Value - Bid, it makes sense to bid lower than his own valuation of the object. 
+\textbf{First Price Auctions :} \\In a first price auction, all the bidders submit their sealed bids and then the highest bidder wins the auction while paying the price he bid. Though very commonly used, the first price auction is not incentive compatible. This means that the bidders will not achieve the best outcome by bidding an amount equal to his true valuation of the object(s). Since the profit for the bidder is Value - Bid, it makes sense to bid lower than his own valuation of the object. 
 \\\\
-\textbf{Incentive Compatibility :} An auction mechanism is said to be Incentive Compatible if every participant can achieve the best outcome to himself just by bidding at his own true valuation. 
+\textbf{Incentive Compatibility :}\\ An auction mechanism is said to be Incentive Compatible if every participant can achieve the best outcome to himself just by bidding at his own true valuation. 
 \\\\
-\textbf{Dominant-Strategy-Incentive-Compatible (DSIC) :} This a strong form of Incentive Compatibility where a bidder fares the best by being truthful regardless of what the other bidders act like. 
+\textbf{Dominant-Strategy-Incentive-Compatible (DSIC) :} \\This a strong form of Incentive Compatibility where a bidder fares the best by being truthful regardless of what the other bidders act like. 
 \\\\
-\textbf{Second Price Auctions :} In a second price auction, all the bidders submit their sealed bids and the highest bidder wins the auction while paying the price of the \textbf{second highest} bidder. Unlike the first price auction mechanism, the second price auction is Incentive Compatible. Infact, it is DSIC, which means it is in the best interest of the bidder to submit his true valuation as the bid itself. 
+\textbf{Second Price Auctions (Vickrey Auctions) :} \\In a second price auction, all the bidders submit their sealed bids and the highest bidder wins the auction while paying the price of the \textbf{second highest} bidder. Unlike the first price auction mechanism, the second price auction is Incentive Compatible. Infact, it is DSIC, which means it is in the best interest of the bidder to submit his true valuation as the bid itself. 
+\\\\
+\textbf{ Vickrey–Clarke–Groves (VCG) Auctions :}\\
+
+A VCG auction is basically a generalization of second price (Vickrey) auctions to multiple identical items. In a VCG auctions, where a set of identical items are sold, the bidders submit their sealed bids based on their internal valuations of the 
+
+Consider an auction where a set of identical products are being sold. Bidders can take part in the auction by announcing the maximum price they are willing to pay to receive N products. Each buyer is allowed to declare more than one bid, since its willingness-to-pay per unit might be different depending on the total number of units it receives. Bidders cannot see other people's bids at any moment since they are sealed (only visible to the auction system). Once all the bids are made, the auction is closed.
+\\
+All the possible combinations of bids are then considered by the auction system, and the one maximizing the total sum of bids is kept, with the condition that it does not exceed the total amount of products available and that at most one bid from each bidder can be used. Bidders who have made a successful bid then receive the product quantity specified in their bid. The price they pay in exchange, however, is not the amount they had bid initially but only the marginal harm their bid has caused to other bidders (which is at most as high as their original bid).
+\\
+This marginal harm caused to other participants (i.e. the final price paid by each individual with a successful bid) can be calculated as: (sum of bids of the auction from the second best combination of bids) - (what other bidders have bid in the current (best) combination of bids). If the sum of bids of the second best combination of bids is the same as that of the best combination, then the price paid by the buyers will be the same as their initial bid. In all other cases, the price paid by the buyers will be lower.
+\\\\
 \subsection*{Treasury Securities auctions}
 
-\paragraph{Treasury securities :}Treasury securities or Treasuries are bonds issued by the government to meet their financial debts. Based on the period of maturity they are categorized into different types that are Treasury bills, notes, bonds, and Treasury inflation-protected securities.
+\paragraph{Treasury securities :}\\Treasury securities or Treasuries are bonds issued by the government to meet their financial debts. Based on the period of maturity they are categorized into different types that are Treasury bills, notes, bonds, and Treasury inflation-protected securities.
 \\\\
 Most of the treasury auctions come in one of the two categories of auctions: Discriminatory Price auction and Uniform Price auction.
 \\\\
-\textbf{Discriminatory-Price auction :} In Discriminatory Price auction, allocation rule is that the bidder with the highest bid wins and the winner pays his own bid, so this reduces to the first-price auction in case of a single object auction.
+\textbf{Discriminatory-Price auction :} \\In Discriminatory Price auction, allocation rule is that the bidder with the highest bid wins and the winner pays his own bid, so this reduces to the first-price auction in case of a single object auction.
 \\\\
-\textbf{Uniform-Price auction :} In this, the allocation rule is same as Discriminatory Price auction, that is the winner with the highest bid wins but in this case, all winners pay an averaged uniform price and this cuts to the second-price auction in single item auction.
+\textbf{Uniform-Price auction :} \\In this, the allocation rule is same as Discriminatory Price auction, that is the winner with the highest bid wins but in this case, all winners pay an averaged uniform price and this cuts to the second-price auction in single item auction.
 \\\\
 Treasury auctions are different from other auctions as the values of these securities in the secondary market in known before the auction and are independent of the private valuation of the bidders. These type of auctions are called common value auctions. This difference in valuation results in a phenomenon called 'winner's curse' which is a significant factor in choosing between the above two pricing rules for revenue maximization proper of the above two price rules.
 \\\\
-\textbf{Winner's Curse :} In a common value auction the real value of the item is the same for all the bidders, but they bid differently according to their estimate of the secondary market value. If we take the average of all the bids as an estimate of the actual secondary market value, then the highest bidder incurs the highest loss by winning the item at such a high price.
+\textbf{Winner's Curse :}\\ In a common value auction the real value of the item is the same for all the bidders, but they bid differently according to their estimate of the secondary market value. If we take the average of all the bids as an estimate of the actual secondary market value, then the highest bidder incurs the highest loss by winning the item at such a high price.
 \\\\
 From the definition of the winner's curse, it can be observed that the winning bidder will suffer more loss in the case of discriminatory price auction than uniform price auction. This causes the bidders to bid less than there valuation and results in lower revenue.
 \\\\
@@ -137,7 +150,7 @@ The reverse is a decreasing clock auction in which the auctioneer quotes a decre
 For the design, we can seperate AuctionIt into two major sections -  the database and the main program/front end. The database consists of the following set of tables : - \\
 \begin{enumerate}
     \item \textbf{User} Table\\
-     - The user table stores information about the user and also his login credentials such as username and password details.
+     - The user table stores information about the user and also his login credentials such as username and password details.\\
     \item \textbf{Designer} Table\\
     - The designer table stores the login credentials for the auction designers, it also stores a list of past auctions created by the designer with auction-id and revenue generated by the auction. If the designer has created custom allocation and pricing rules then we store their ids (from Table 7 and Table 8) for easy access while creating later auctions.
     \item \textbf{Default Auction} Table
@@ -148,7 +161,14 @@ For the design, we can seperate AuctionIt into two major sections -  the databas
     \item \textbf{Pricing Rules} Table
 \end{enumerate}
 \section*{Further improvements}
-
+\newpage
 \section*{References}
+\begin{enumerate}
+ \item von Ahn, Luis (2011-10-13). "Sponsored Search" 15–396: Science of the Web Course Notes. Carnegie Mellon University.
+ \item Kevin Leyton-Browna, Paul Milgromb, and Ilya Segal. Economics and computer science of a radio
+spectrum reallocation PNAS | July 11, 2017 | vol. 114 | no. 28
+\item Bartolini (deceased), Leonardo and Cottarelli, Carlo, Designing Effective Auctions for Treasury Securities (July 1997). Current Issues in Economics and Finance, Vol. 3, No. 9, July 1997. 
+ \end{enumerate}
+% \end{large}
 \end{document}
 
