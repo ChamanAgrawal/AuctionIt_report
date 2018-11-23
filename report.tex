@@ -10,6 +10,7 @@
 \lstset{language=Python, basicstyle=\normalsize\sffamily\linespread{0.8}, numbers=left, numberstyle=\small, stepnumber=1, numbersep=5pt}
 \usepackage{fancyhdr}
 \usepackage{pdfpages} 
+\fancypagestyle{note_1}{\fancyfoot[R]{\textit{* These kind of auction are sealed bid auction.}}}
 \setlength{\parindent}{0pt}
 
 \pagestyle{fancy}
@@ -51,7 +52,7 @@ and therefore the seller might have some reserved price below which she would no
 If left to the market, the price might fall below that price.
 Also, there do exist willing buyers who are ready to pay the higher value.
 Moreover, it has become a method of determining prices of goods. \\
-Some salient features of using an auction are:
+Some salient features of using an auction are \cite{vijay}:
 \begin{itemize}
     \item Speedy Process, Quick Turnaround.
     \item Competitive Bidding.
@@ -62,7 +63,8 @@ Some salient features of using an auction are:
     \item and may more...
 \end{itemize}
 Auctions have become an integral part of today's world; they are used extensively in almost every field. Some widely used auctions are spectrum auction, treasury auction, auction for advertisement, auctions for players such as in IPL or EPL leagues.\\ \\
-Considering the need for auctions, we at this moment present a software, which is generic enough to conduct several different auctions, called \textbf{``Auctionit''}.
+Considering the need for auctions, we at this moment present a software, which is generic enough to conduct several different auctions, called \textbf{``Auctionit''}. \\
+Auctionit is also useful in simulating different auctions, with data from past auctions/generated from some probability distribution. It also helps in analysis of these auctions.
 
 
 \pagebreak
@@ -77,10 +79,11 @@ Before we started designing AuctionIt, we studied about auctions. We read papers
 
 
 \pagebreak
+\thispagestyle{note_1}
 \section*{Theory Review}
-\subsection*{Terminologies}
+\subsection*{Terminologies \cite{stanford}} 
 Before we proceed through formal text, let's get familiar with some of the terms.
-Here bid vector $\mathbf{b} = (b_1, b_2,\ldots,b_n)$, each component represents a bid from a bidder.
+Here bid vector \cite{stanford} $\mathbf{b} = (b_1, b_2,\ldots,b_n)$, each component represents a bid from a bidder.
 
 \begin{itemize}
     \item[-] \textbf{Valuation:} It is the maximum price or anything equivalent to that, which denote the willingness-to-pay. 
@@ -96,22 +99,22 @@ Here bid vector $\mathbf{b} = (b_1, b_2,\ldots,b_n)$, each component represents 
 
     \item[-] \textbf{Second-Price Auction*:} Allocations rule in this auction is similar to that of first price auction, i.e. Highest bidder is selected as the winner.
     However, the amount he has to pay is equal to second highest bid in the auction.
-    This type of auction is also known as \textbf{Vikrey Auction}.
+    This type of auction is also known as \textbf{Vikrey Auction} \cite{stanford}.
 
     \item[-] \textbf{Allocation Rule:} This rule indicates who will win the auction.
     This can be seen as a function of the bid vector.
 
     \item[-] \textbf{Payment Rule:} This indicates what the winner has to pay, similar to allocation rule, this can also be understood as a function of the bid vector.
 
-    \item[-] \textbf{Dutch Auction:} This is a special type of auction in which the seller, announces an initial price for a product, and then keeps on reducing it until some buyer agrees to take it.
+    \item[-] \textbf{Dutch Auction \cite{vijay}:} This is a special type of auction in which the seller, announces an initial price for a product, and then keeps on reducing it until some buyer agrees to take it.
 
-    \item[-] \textbf{English Auction:} This is an open bid auction (bids are present openly i.e known to other bidders), similar to the first-price auction in allocation and pricing rule.
+    \item[-] \textbf{English Auction \cite{vijay}:} This is an open bid auction (bids are present openly i.e known to other bidders), similar to the first-price auction in allocation and pricing rule.
 
     \item[-] \textbf{Dominant Strategy:} It refers to a strategy, which guarantees to maximize a bidders utility, independent of what other bidders bid.
 
     \item[-] \textbf{Utility:} It refers to the net gain after the auction is over. If the bidder wins the auction, then his utility is increased by $v_i$ (his valuation). If he loses, his net utility = $0$.
 \end{itemize}
-\subsection*{Second-Price Auction, DSIC and social welfare}
+\subsection*{Second-Price Auction, DSIC and social welfare \cite{stanford}}
 Second price auctions are special in the sense that there exists a dominant strategy.
 Let us denote the valuations of bidder $i$ by $v_i$, his bid by $b_i$, and the bid vector by $\mathbf{b}$. Now lets shift our focus on bidder $i$, let $B = \max_{j\ne i} b_j$. 
 Assume that bidder $i$ bids truly, in other words, his bid is equal to his valuation for the object. Or $b_i = v_i$
@@ -119,19 +122,19 @@ Assume that bidder $i$ bids truly, in other words, his bid is equal to his valua
 So, if $v_i < B$, then with true bidding his net utility gain $= 0$. If $v_i > B$, then he wins, and his utility $= v_i - B$
 
 \textbf{Observation 1:} Truthful bidding gives a non-negative utility, irrespective of other bidders.  \\ \\
-\textbf{Dominant-Strategy Incentive Compatible(DSIC):} An auction is DSIC if
+\textbf{Dominant-Strategy Incentive Compatible(DSIC)\cite{stanford}:} An auction is DSIC if
 \begin{itemize}
     \item[-] Truthful bidding is always a dominant strategy.
     \item[-] Truthful bidders always obtain non negative utility.
 \end{itemize}
-\textbf{Social Welfare:} Social welfare ($\mathbf{W}$) is defined as the net welfare of society, mathematically $\mathbf{W} = \sum_{i=1}^{n}v_i x_i$. \\ \\
+\textbf{Social Welfare\cite{stanford}:} Social welfare ($\mathbf{W}$) is defined as the net welfare of society, mathematically $\mathbf{W} = \sum_{i=1}^{n}v_i x_i$. \\ \\
 \textbf{Note:} Second-Price auction is DSIC and welfare maximizing.
 
 
 \pagebreak
 Let's now turn our attention to more complex auction: \\
 
-\textbf{ Vickrey–Clarke–Groves (VCG) Auctions:}\\
+\textbf{ Vickrey–Clarke–Groves (VCG) Auctions \cite{vijay}:}\\
 
 A VCG auction is a generalization of second price (Vickrey) auctions to multiple identical items. In a VCG auction, where a set of identical items are sold, the bidders submit their sealed bids based on their internal valuations of the items. Each bidder can have multiple bids depending on the number of things they bid on; then the auction closes when all the bids are submitted.
 \\
@@ -142,7 +145,7 @@ This price can be calculated as: (sum of bids of the auction from the second bes
 
 \subsection*{Treasury Securities auctions}
 
-\paragraph{Treasury securities :} Treasury securities or Treasuries are bonds issued by the government to meet their financial debts. Based on the period of maturity they are categorized into different types that are Treasury bills, notes, bonds, and Treasury inflation-protected securities.
+\textbf{Treasury securities:} Treasury securities or Treasuries are bonds issued by the government to meet their financial debts. Based on the period of maturity they are categorized into different types that are Treasury bills, notes, bonds, and Treasury inflation-protected securities.
 \\\\
 Most of the treasury auctions come in one of the two categories of auctions: Discriminatory Price auction and Uniform Price auction.
 \\\\
@@ -243,7 +246,7 @@ First of all, let's get familiar with the database structure.
     \item \textbf{Live auction table:} This table stores the detail corresponding to a running auction. Some features of this table are:
     \begin{itemize}
         \item[-] Auction ID: unique to each auction.
-        \item[-] Auction label: In case of a sequential auction this feature is relevant, where the 1subsequent auction is similar to the previous one.
+        \item[-] Auction label: In case of a sequential auction this feature is relevant, where the subsequent auction is similar to the previous one.\cite{treasury}
         \item[-] Designer ID: user ID of the owner.
         \item[-] Creation date
         \item[-] Start / End date: denotes the duration when auction would be live.
@@ -268,6 +271,16 @@ First of all, let's get familiar with the database structure.
 \pagebreak
 \begin{thebibliography}{9}
 
+\bibitem{stanford}
+Tim Roughgarden.
+\textit{Lectures Notes on Algorithmic Game Theory.}
+Stanford CS364A, Fall 2013.
+
+\bibitem{vijay}
+Vijay Krishna.
+\textit{Auction Theory.}
+Second Edition - 2010.
+
 \bibitem{treasury} 
 Leonardo Bartolini and Carlo Cottarelli.
 \textit{Designing Effective Auctions for Treasury Securities}. 
@@ -288,12 +301,12 @@ Paul R. Milgrom.
 \textit{Auctions and Bidding: A Primer.}
 Journal of Economic Perspective, \textit{Vol. 3 No. 3, Summer 89}
 
-\bibitem{}
+\bibitem{competitive_bidding}
 Paul R. Milgrom and Robert J. Weber.
 \textit{A theory of auctions and competitive bidding - II.}
 1981
 
-\bibitem{}
+\bibitem{radio_spectrum}
 Kevin Leyton-Brown, Paul R. Milgrom and Ilya Segal.
 \textit{Economics and computer science of a radio spectrum reallocation.}
 PNAS, \textit{Vol. 114 No. 28, 2017}
